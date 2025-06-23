@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
@@ -63,7 +64,7 @@ class TeacherController extends Controller
           $teachers = Teacher::find($id);
         $input = $request->all();
         $teachers->update($input);
-        return redirect('teachers')->with('flash_message', 'teacher Updated!'); 
+        return redirect('teachers')->with('flash_message', 'Teacher Updated!'); 
     }
 
     /**

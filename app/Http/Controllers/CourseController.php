@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
@@ -72,7 +73,6 @@ class CourseController extends Controller
     public function destroy(string $id): RedirectResponse
     {
          Course::destroy($id);
-        return redirect('courses')->with('flash_message', 'Course Deleted!'); 
+        return redirect('courses')->with('flash_message', 'Course deleted!'); 
     }
 }
-
